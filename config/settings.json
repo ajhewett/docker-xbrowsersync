@@ -1,0 +1,15 @@
+{
+    "status": {
+      "message": "Welcome to my xBrowserSync service!"
+    },
+    "db": {
+        "host": "{{XBROWSERSYNC_MONGODB_SERVER}}"
+    },
+    "log": {
+        "enabled": true,
+        "level": "info",
+        "path": "/dev/stdout",
+        "rotatedFilesToKeep": 10000,
+        "rotationPeriod": "100y"
+    }
+}
