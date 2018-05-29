@@ -20,3 +20,4 @@ RUN sed -i "s/{{XBROWSERSYNC_MONGODB_SERVER}}/${XBROWSERSYNC_MONGODB_SERVER}/g" 
 
 CMD [ "node", "dist/api.js" ]
 
+EXPOSE 8080
