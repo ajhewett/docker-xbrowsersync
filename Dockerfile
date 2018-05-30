@@ -10,7 +10,7 @@ RUN wget --quiet https://github.com/xBrowserSync/API/archive/${XBROWSERSYNC_VERS
 
 WORKDIR /xbrowsersync
 
-ENV XBROWSERSYNC_MONGODB_SERVER "nas.localdomain"
+ENV XBROWSERSYNC_MONGODB_SERVER "mongo"
 ENV XBROWSERSYNC_DB_USER "xbrowsersyncdb"
 ENV XBROWSERSYNC_DB_PWD "xbrowsersyncdb"
 
