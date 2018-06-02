@@ -8,9 +8,9 @@
     "db": {
         "host": "{{XBROWSERSYNC_MONGODB_SERVER}}"
     },
-    "dailyNewSyncsLimit": "{{XBROWSERSYNC_DAILYNEWSYNCSLIMIT}}",
-    "maxSyncSize": "{{XBROWSERSYNC_MAXSYNCSIZE}}",
-    "allowedOrigins": [ "{{XBROWSERSYNC_ALLOWEDORIGINS}}" ],
+    "dailyNewSyncsLimit": {{XBROWSERSYNC_DAILYNEWSYNCSLIMIT}},
+    "maxSyncSize": {{XBROWSERSYNC_MAXSYNCSIZE}},
+    "allowedOrigins": [ {{XBROWSERSYNC_ALLOWEDORIGINS}} ],
     "log": {
         "enabled": true,
         "level": "info",
