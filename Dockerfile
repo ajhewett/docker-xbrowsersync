@@ -10,14 +10,18 @@ RUN wget --quiet https://github.com/xBrowserSync/API/archive/${XBROWSERSYNC_VERS
 
 WORKDIR /xbrowsersync
 
+RUN npm install -g envsub \
+    && npm install
+
+COPY config/settings-template.json /xbrowsersync/config
+COPY run.sh .
+
 ENV XBROWSERSYNC_MONGODB_SERVER "mongo"
 ENV XBROWSERSYNC_DB_USER "xbrowsersyncdb"
 ENV XBROWSERSYNC_DB_PWD "xbrowsersyncdb"
+ENV XBROWSERSYNC_STATUS_MESSAGE "Welcome to my xBrowserSync service!"
+ENV XBROWSERSYNC_SERVER_BEHINDPROXY "false"
 
-COPY config/settings.json /xbrowsersync/config
-RUN sed -i "s/{{XBROWSERSYNC_MONGODB_SERVER}}/${XBROWSERSYNC_MONGODB_SERVER}/g" /xbrowsersync/config/settings.json \
-    && npm install --unsafe-perm
-
-CMD [ "node", "dist/api.js" ]
+CMD [ "/bin/bash", "run.sh" ]
 
 EXPOSE 8080

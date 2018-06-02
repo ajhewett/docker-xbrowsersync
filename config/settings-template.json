@@ -1,6 +1,9 @@
 {
     "status": {
-      "message": "Welcome to my xBrowserSync service!"
+      "message": "{{XBROWSERSYNC_STATUS_MESSAGE}}"
+    },
+    "server": {
+        "behindProxy": "{{XBROWSERSYNC_SERVER_BEHINDPROXY}}"
     },
     "db": {
         "host": "{{XBROWSERSYNC_MONGODB_SERVER}}"
