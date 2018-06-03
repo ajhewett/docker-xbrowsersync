@@ -13,7 +13,7 @@ WORKDIR /xbrowsersync
 RUN npm install -g envsub \
     && npm install
 
-COPY config/settings.json /xbrowsersync/config
+COPY config/settings.json.handlebars /xbrowsersync/config
 COPY run.sh .
 
 ENV XBROWSERSYNC_MONGODB_SERVER "mongo"
