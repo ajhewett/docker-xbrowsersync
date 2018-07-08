@@ -1,6 +1,6 @@
 FROM node:10-slim
 
-ENV XBROWSERSYNC_VERSION v1.1.2
+ENV XBROWSERSYNC_VERSION v1.1.3
 
 # the tar.gz archive has paths prefixed with API-1.1.2 so strip this when extracting
 RUN wget --quiet https://github.com/xBrowserSync/API/archive/${XBROWSERSYNC_VERSION}.tar.gz \
